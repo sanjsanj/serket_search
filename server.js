@@ -19,6 +19,8 @@ app.use('/assets', express.static(__dirname + '/assets'));
 
 app.use('/js', express.static(__dirname + '/js'));
 
+app.use('/DataTables', express.static(__dirname + '/DataTables'));
+
 // set the home page route
 app.get('/', function(req, res) {
 

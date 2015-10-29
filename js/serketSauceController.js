@@ -3,6 +3,6 @@ app.controller('SerketSauceController', ['$http', function($http) {
   self.data = [];
 
   $http.get('http://www.serket.uk/pharmacies/pharmacylist-format').success(function(data) {
-    self.data = data;
+    self.data = data.data;
   });
 }]);

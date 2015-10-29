@@ -4,7 +4,7 @@ app.controller('SerketSauceController', ['$http', function($http) {
   var geocoder;
   var map;
 
-  $http.get('http://www.serket.uk/pharmacies/pharmacylist-format').success(function(data) {
+  $http.jsonp('http://www.serket.uk/pharmacies/pharmacylist-format').success(function(data) {
     self.data = data.data;
   });
 

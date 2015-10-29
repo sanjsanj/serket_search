@@ -1,1 +1,1 @@
-var app = angular.module('SerketSauce', []);
+var app = angular.module('SerketSauce', ['ui.bootstrap']);

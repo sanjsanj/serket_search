@@ -22,7 +22,10 @@
       <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
 
         <div class="row">
-          <img class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4" src="images/logo.png">
+          <div class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
+            <img src="images/logo.png">
+            <label><input placeholder="Search" ng-model="searchText"></label>
+          </div>
         </div>
 
         <div class="row table-responsive">
@@ -36,7 +39,6 @@
                 <th>Phone</th>
               </tr>
             </thead>
-            <label>Search: <input ng-model="searchText"></label>
             <tbody>
               <tr ng-repeat="data in ctrl.data | filter:searchText">
                 <td>{{data[0]}}</td>

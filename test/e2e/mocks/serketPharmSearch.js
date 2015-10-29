@@ -1,5 +1,4 @@
-module.exports = [
-{
+module.exports = {
   request: {
     path: 'http://www.serket.uk/pharmacies/pharmacylist-format',
     method: 'GET'
@@ -63,3 +62,4 @@ module.exports = [
     ]
   ]
  }
+}

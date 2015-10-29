@@ -30,8 +30,9 @@
 
         </tr>
       </thead>
+      <label>Search: <input ng-model="searchText"></label>
       <tbody>
-        <tr ng-repeat="data in ctrl.data">
+        <tr ng-repeat="data in ctrl.data | filter:searchText">
           <td>{{data[0]}}</td>
           <td>{{data[1]}}</td>
           <td>{{data[2]}}, {{data[3]}}, {{data[4]}}, {{data[5]}}, {{data[6]}}</td>

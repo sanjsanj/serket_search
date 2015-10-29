@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/sanjsanj/serket_search#readme",
   "dependencies": {
+    "bootstrap": "^3.3.5",
     "bower": "^1.6.5",
     "ejs": "^2.3.4",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "protractor": "^2.5.1"
   }
 }

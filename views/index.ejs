@@ -10,16 +10,38 @@
   <title>Serket Sauce</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script type="text/javascript" src="DataTables/datatables.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/serketSauceController.js"></script>
 </head>
 <body ng-controller="SerketSauceController as ctrl">
   <h1>content</h1>
-  <div ng-repeat="data in ctrl.data">
-  {{data}}
+  <div>
+    <table id="table_id" class="display">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>NACS Code</th>
+          <th>Address</th>
+          <th>Postcode</th>
+          <th>Phone</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="data in ctrl.data">
+          <td>{{data[0]}}</td>
+          <td>{{data[1]}}</td>
+          <td>{{data[2]}}, {{data[3]}}, {{data[4]}}, {{data[5]}}, {{data[6]}}</td>
+          <td>{{data[7]}}</td>
+          <td>{{data[8]}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </body>
 </html>

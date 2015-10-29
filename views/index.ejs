@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="SerketSauce">
+<html lang="en">
 <head>
   <meta name="author" content="">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,7 @@
   <script src="js/app.js"></script>
   <script src="js/serketSauceController.js"></script>
 </head>
-<body ng-controller="SerketSauceController as ctrl">
+<body ng-controller="SerketSauceController as ctrl" ng-app="SerketSauce">
 
   <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCEpf-QX6kPMhXNjbhEY0JSuZzBu_L3rj0&sensor=false" type="text/javascript"></script>
 
@@ -25,7 +25,10 @@
       <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
 
         <div class="row">
-          <img class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4" src="images/logo.png">
+          <div class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
+            <img src="images/logo.png">
+            <label><input placeholder="Search" ng-model="searchText"></label>
+          </div>
         </div>
 
         <div class="row table-responsive">
@@ -39,9 +42,10 @@
                 <th>Phone</th>
               </tr>
             </thead>
-            <label>Search: <input ng-model="searchText"></label>
+            
             <tbody ng-repeat="data in ctrl.data | filter:searchText">
               <tr value="Geocode" ng-click="open(data)">
+                <div id="map-canvas" style="width:100%;height:300px;"></div>
                 <td>{{data[0]}}</td>
                 <td>{{data[1]}}</td>
                 <td>{{data[2]}}, {{data[3]}}, {{data[4]}}, {{data[5]}}, {{data[6]}}</td>
